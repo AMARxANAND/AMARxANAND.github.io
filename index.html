@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amar❤️Ankita</title>
+    <style>
+        body {
+            background-color: rgb(142, 50, 147);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .div1 {
+            text-align: center;
+           
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+        <h1 >Happy Valentine'sDay Ankita ❤️❤️❤️❤️</h1>
+        <h1> I Love You Very Much Sona.</h1>
+        
+    </div>
+    <br>
+    <div>
+        <img src="amar1.jpg" width="400px" height="400px">
+        <img src="amar2.jpg" width="400px" height="400px">
+        <img src="amar3.jpg" width="400px" height="400px">
+        <img src="amar4.jpg" width="400px" height="400px">
+    </div>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amar❤️Ankita</title>
+    <style>
+        body {
+            background-color: rgb(200, 153, 205);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .div1 {
+            text-align: center;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: red;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        h2{
+            font-size: 30px;
+            color: blue;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .rotate {
+            animation: rotate 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <h1>Happy Valentine's Day Ankita ❤️❤️❤️❤️</h1>
+        <h1>I Love You Very Much Sona.</h1>
+    </div>
+    <div class="images">
+        <img src="amar1.jpg" width="400px" height="400px" onclick="rotateImage(this)">
+        <img src="amar2.jpg" width="400px" height="400px" onclick="rotateImage(this)">
+        <img src="amar3.jpg" width="400px" height="400px" onclick="rotateImage(this)">
+        <img src="amar4.jpg" width="400px" height="400px" onclick="rotateImage(this)">
+    </div>
+    <div>
+        <h2>You are the most important person in my life babu.</h2>
+    </div>
+    <script>
+        function rotateImage(img) {
+            img.classList.add('rotate');
+            setTimeout(() => {
+                img.classList.remove('rotate');
+            }, 1000); // Duration of the animation
+        }
+    </script>
+</body>
+</html> 
+
+
