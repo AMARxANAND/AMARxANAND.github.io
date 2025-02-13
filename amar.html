@@ -1,0 +1,79 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amar❤️Ankita</title>
+    <style>
+        body {
+            background-color: rgb(200, 153, 205);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .div1 {
+            text-align: center;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: red;
+        }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        h2 {
+            font-size: 30px;
+            color: blue;
+            text-align: center;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .rotate {
+            animation: rotate 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        if (localStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'index.html';
+        }
+    </script>
+    <div id="div1">
+        <h1>Happy Valentine's Day Ankita ❤️❤️❤️❤️</h1>
+        <h1>I Love You Very Much Sona.</h1>
+    </div>
+    <div class="images">
+        <img src="amar1.jpg" width="400px" height="400px" onclick="rotateImage(this)">
+        <img src="amar2.jpg" width="400px" height="400px" onclick="rotateImage(this)">
+        <img src="amar3.jpg" width="400px" height="400px" onclick="rotateImage(this)">
+        <img src="amar4.jpg" width="400px" height="400px" onclick="rotateImage(this)">
+    </div>
+    <div id="div2">
+        <h2>You are the most important person in my life babu.</h2>
+    </div>
+    <script>
+        function rotateImage(img) {
+            img.classList.add('rotate');
+            setTimeout(() => {
+                img.classList.remove('rotate');
+            }, 1000); // Duration of the animation
+        }
+    </script>
+</body>
+</html>

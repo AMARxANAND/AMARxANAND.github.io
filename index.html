@@ -1,47 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amar❤️Ankita</title>
-    <style>
-        body {
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .div1 {
-            text-align: center;
-           
-        }
-        h1{
-            font-size: 40px;
-            text-align: center;
-
-        }
-    </style>
-</head>
-<body>
-
-    <div id="div1">
-        <h1 >Happy Valentine'sDay Ankita ❤️❤️❤️❤️</h1>
-        <h1> I Love You Very Much Sona.</h1>
-        
-    </div>
-    <br>
-    <div>
-        <img src="amar1.jpg" width="400px" height="400px">
-        <img src="amar2.jpg" width="400px" height="400px">
-        <img src="amar3.jpg" width="400px" height="400px">
-        <img src="amar4.jpg" width="400px" height="400px">
-    </div>
-    
-</body>
-</html> -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,60 +14,41 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
         }
-        .div1 {
+        .container {
             text-align: center;
         }
-        h1 {
-            font-size: 40px;
-            text-align: center;
-            color: red;
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
         }
-        .images {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        h2{
-            font-size: 30px;
-            color: blue;
-        }
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        .rotate {
-            animation: rotate 1s linear;
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div id="div1">
-        <h1>Happy Valentine's Day Ankita ❤️❤️❤️❤️</h1>
-        <h1>I Love You Very Much Sona.</h1>
-    </div>
-    <div class="images">
-        <img src="amar1.jpg" width="400px" height="400px" onclick="rotateImage(this)">
-        <img src="amar2.jpg" width="400px" height="400px" onclick="rotateImage(this)">
-        <img src="amar3.jpg" width="400px" height="400px" onclick="rotateImage(this)">
-        <img src="amar4.jpg" width="400px" height="400px" onclick="rotateImage(this)">
-    </div>
-    <div>
-        <h2>You are the most important person in my life babu.</h2>
+    <div class="container">
+        <h1 style="color: red;">Enter Password</h1>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()" style="color: blue;">Submit</button>
+        <p id="message" style="color: red;"></p>
     </div>
     <script>
-        function rotateImage(img) {
-            img.classList.add('rotate');
-            setTimeout(() => {
-                img.classList.remove('rotate');
-            }, 1000); // Duration of the animation
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const message = document.getElementById('message');
+            if (password === 'ankita') {
+                localStorage.setItem('authenticated', 'true');
+                window.location.href = 'amar.html';
+            } else {
+                message.textContent = 'Incorrect password. Please try again.';
+            }
         }
     </script>
 </body>
-</html> 
-
-
+</html>
